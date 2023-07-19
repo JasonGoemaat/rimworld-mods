@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.StillSuit</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-stillsuit</name>
+  <description>OP Armor covering entire body and providing comfort in any temperature.   Add with dev menu, and only use 'skin' and 'middle' to wear and show outer clothing.</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

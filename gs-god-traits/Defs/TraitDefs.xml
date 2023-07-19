@@ -1,0 +1,196 @@
+<Defs>
+  <TraitDef>
+    <defName>GodSpeed</defName>
+    <commonality>0</commonality>    <!-- only add by cheating I hope -->
+    <degreeDatas>
+      <li>
+        <label>Mercury</label>
+        <description>[PAWN_nameDef] runs like the wind.</description>
+        <statOffsets>
+          <MoveSpeed>4.0</MoveSpeed>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>GodSmart</defName>
+    <commonality>0</commonality>    <!-- only add by cheating I hope -->
+    <degreeDatas>
+      <li>
+        <label>Athena</label>
+        <description>[PAWN_nameDef] knows their stuff.</description>
+        <statOffsets>
+          <GlobalLearningFactor>1.75</GlobalLearningFactor>
+          <MentalBreakThreshold>-0.50</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>Skillfull</defName>
+    <commonality>0</commonality>    <!-- only add by cheating I hope -->
+    <degreeDatas>
+      <li>
+        <label>Hephaestus</label>
+        <description>[PAWN_nameDef] is quite skillfull.</description>
+        <skillGains>
+          <li>
+            <key>Melee</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Shooting</key>
+            <value>10</value>
+          </li>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>Buffs</defName>
+    <commonality>0</commonality>    <!-- only add by cheating I hope -->
+    <degreeDatas>
+      <li>
+        <label>Buffs</label>
+        <description>[PAWN_nameDef] has it all.</description>
+
+        <statOffsets>
+          <!-- Checking out Stats_Pawns_General.xml -->
+
+          <ComfyTemperatureMin>-2500</ComfyTemperatureMin> <!-- This works perfectly!  Min is -2000 -->
+          <ComfyTemperatureMax>2500</ComfyTemperatureMax> <!-- This works perfectly!  Max is 2000 -->
+          <FilthRate>-0.9</FilthRate> <!-- -0.9 should make it 1.0 - 0.9 = 0.1 -->
+
+          <ToxicEnvironmentResistance>0.9</ToxicEnvironmentResistance> <!-- 0.9 gives 90% resistance -->
+
+
+          <Mass>0.5</Mass>
+
+          <!-- Tildema is $5960, $1750 base * 341% for quality.   0.1 here ADDS $0.10, $-9000 shows but is ignored, same for $-1000
+          <MarketValue>-1000</MarketValue>
+          -->
+
+          <!-- gives error
+          <MarketValueBase>-100</MarketValueBase> -->
+
+          <!-- Does not affect anything for colonist 
+          <LifespanFactor>2.9</LifespanFactor> -->
+
+          <!-- Check RimWorld.StatDefOf, seems like public static StatDef names equal these, no not really -->
+          <Flammability>-0.69</Flammability> <!-- starts at 70%, -0.69 sets to 1% -->
+          <SocialImpact>1.50</SocialImpact> <!-- 1.5 gives 100% base + 150% (here) + 10% (cowboy hat) - 260% times 134% from social 19 gives 348.4%, afftects pawns by social interactions, not sure if negative count like rebuffing -->
+          <MeleeHitChance>50</MeleeHitChance> <!-- Melee 11 + 4.0 (this) gave 83% hit chance -->
+          <TameAnimalChance>2.0</TameAnimalChance> <!-- trying 2.0, original is base 100% * 64% (Animals 20) = 64% -->
+
+          <!-- These are for clothing materials apparently
+          <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+          <StuffPower_Insulation_Heat>40</StuffPower_Insulation_Heat>
+          -->
+
+          <!-- These don't seem to do anything, probably for structurse?
+            - doesn't seem to show on max comfortable temperature of 66.8, or min of -57.8 ...
+            - base is 16.0c - 26.0c, probably for pawn type
+          <Insulation_Heat>1500</Insulation_Heat> 
+          <Insulation_Cold>1500</Insulation_Cold>
+          -->
+
+          <!-- Doesn't seem to do anything, probably for actual doors or door materials
+          <DoorOpenSpeed>9.37</DoorOpenSpeed>  -->
+
+          <!-- Doesn't seem to do anything, must be for objects or gear?
+          <StuffEffectMultiplierInsulation_Cold>2.1</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>2.4</StuffEffectMultiplierInsulation_Heat>
+          -->
+
+          <!-- doesn't affect stats, probably for floors where it decreases how much filth matters?
+          <FilthMultiplier>0.02</FilthMultiplier> -->
+
+          <TradePriceImprovement>5.5</TradePriceImprovement> <!-- 100% + this 250% = 350%, times 28% for 19 social gives 99.7% -->
+
+          <NegotiationAbility>5.0</NegotiationAbility> <!-- original base 100% + 182% from 19 social gives 282.5%, 5.0 means base is 600%, used for Prisoner recruitment, faction gifts, peace talks -->
+          <GlobalLearningFactor>5.75</GlobalLearningFactor> <!-- 100% base + 25% great memory +575% here = 700% total -->
+          <MentalBreakThreshold>-0.50</MentalBreakThreshold> <!-- -0.50 decreases by 50%, base of 35% makes it minimum 1% -->
+          <MoveSpeed>8.0</MoveSpeed> <!-- 4.6 base + 8.0 buffs = 12.6 c/s -->
+          <MeleeDodgeChance>99</MeleeDodgeChance> <!-- Melee 11 gives 11, + 99 gives 110, curve shows 110 -> 50 = 50% which must be max-->
+          <IncomingDamageFactor>-0.99</IncomingDamageFactor> <!-- 0.1 ADDS 10%, -0.99 subtracts 99% leaving 1% -->
+          <!-- This is from quick sleeper, somehow 0.5 is 2/3?
+            Maybe it's 150% then?  So 6 hours needed, get
+            bonus 3 hours, = 9 hours sleep.   Makes
+            sense, so upping this makes you sleep faster -->
+          <RestRateMultiplier>8.0</RestRateMultiplier> <!-- 8.0 is 800% in ui, sleep for 1 hour, get 8 hours worth of rest -->
+          <WorkSpeedGlobal>1.50</WorkSpeedGlobal> <!-- 1.5 means total work speed is 250% -->
+          <AimingDelayFactor>-0.5</AimingDelayFactor> <!-- -0.5 means -50%, so 100% becomes 50% -->
+          <ShootingAccuracyPawn>250</ShootingAccuracyPawn> <!-- 17 shooting skill + 25 = 42 which is curved to 99.8% (91.8% at distance 45), upping to 250 gives 99.9% (95.6% at 45) -->
+          <PawnBeauty>2</PawnBeauty> <!-- simply pawn beauty value, 2 is very high I think -->
+          <ImmunityGainSpeed>8.0</ImmunityGainSpeed> <!-- 8.0 is +800% or 900%, so after age factor lowering by 93% it is 835% -->
+          <RestFallRateFactor>-0.99</RestFallRateFactor> <!-- Need bar decreases at 100% - 99% = 1% speed -->
+          <!-- <DeepDrillingSpeed>20.00</DeepDrillingSpeed> --> <!-- does this work? seems to, ridiculously fast, 2100% (100% base + 2000% here) * 250% from WorkSpeedGlobal * 2440% from 20 mining is 128100% -->
+        </statOffsets>
+        <!-- These don't seem to get you anything -->
+        <!-- 
+        <skillGains> 
+          <li>
+            <key>Shooting</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Melee</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Construction</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Mining</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Cooking</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Plants</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Animals</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Crafting</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Artistic</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Medicine</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Social</key>
+            <value>10</value>
+          </li>
+          <li>
+            <key>Intellectual</key>
+            <value>10</value>
+          </li>
+        </skillGains> 
+        -->
+
+        <hungerRateFactor>0.1</hungerRateFactor>
+
+        <marketValueFactorOffset>0.5</marketValueFactorOffset>
+
+        <statFactors>
+          <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

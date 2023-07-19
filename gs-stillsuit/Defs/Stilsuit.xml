@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Create tasteThought for eating simple meal -->
+<Defs>
+  <ThingDef Name="ApparelNoQualityStilsuitBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <selectable>True</selectable>
+    <pathCost>14</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>10000</MaxHitPoints>
+      <Flammability>0.01</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>25</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <burnableByRecipe>true</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="ApparelStilsuitBaseA" ParentName="ApparelNoQualityStilsuitBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="ArmorMachineableStilsuitBase" ParentName="ApparelStilsuitBaseA" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ApparelStilsuitBaseB" ParentName="ArmorMachineableStilsuitBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ReconArmor/ReconArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>0</generateCommonality>
+    <generateAllowChance>0</generateAllowChance>
+    <tradeTags>
+      <li>HiTechArmor</li>
+      <li>Armor</li>
+    </tradeTags>
+    <statBases>
+      <WorkToMake>4</WorkToMake>
+      <MaxHitPoints>28000</MaxHitPoints>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>2</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <Insulation_Cold>32</Insulation_Cold>
+      <Insulation_Heat>32</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ReconArmor/ReconArmor</wornGraphicPath>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.01,0.01,0.01)</only>
+        </li>
+      </options>
+    </colorGenerator>
+    <comps>
+    </comps>
+    <thingSetMakerTags>
+    </thingSetMakerTags>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ApparelStilsuitBaseB">
+    <defName>Apparel_Stilsuit</defName>
+    <label>stilsuit middle</label>
+    <description>Fremen manufacture</description>
+    <apparel>
+      <layers>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+    <recipeMaker>
+      <displayPriority>115</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+ 
+  <ThingDef ParentName="ApparelStilsuitBaseB">
+    <defName>Apparel_StilsuitSkin</defName>
+    <label>stilsuit skin</label>
+    <description>Fremen manufacture</description>
+    <apparel>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+    <recipeMaker>
+      <displayPriority>115</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelStilsuitBaseB">
+    <defName>Apparel_StilsuitOuter</defName>
+    <label>stilsuit outer</label>
+    <description>Fremen manufacture</description>
+    <apparel>
+      <layers>
+        <li>Shell</li>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+    <recipeMaker>
+      <displayPriority>115</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+</Defs>
+  

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.SatedAnimals</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-sated-animals</name>
+  <description>Most pen animals require 1/3 the food</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.PowerLamps</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-power-lamps</name>
+  <description>Provides 3 new lamps that provide their own power.  One version has a thermostat and provides heat as well.  One cools the area down to 20c.  One cools the area down to -15c for use in freezers.</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

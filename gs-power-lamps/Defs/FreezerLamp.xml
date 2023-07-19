@@ -1,0 +1,43 @@
+<Defs>
+  <ThingDef ParentName="LampBase">
+    <defName>FreezerLamp</defName>
+    <label>Freezer Lamp</label>
+    <description>A lamp providing power and cooling down to -15c</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+    </graphicData>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <statBases>
+      <Mass>1</Mass>
+      <MaxHitPoints>5200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>99</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Power</designationCategory>
+    <uiOrder>2990</uiOrder>
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(150,150,250,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-500</heatPerSecond>
+        <heatPushMinTemperature>-15</heatPushMinTemperature>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,82 @@
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.1]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.033</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.115]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.038</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.125]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.041</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.14]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.046</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.15]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.05</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.175]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.058</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.2]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.066</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.225]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.075</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.275]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.091</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.28]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.092</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.325]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.108</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.425]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.141</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=0.535]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.178</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=1]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.333</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=1.07]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.35</baseHungerRate></value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@ParentName="AnimalThingBase"]/race[baseHungerRate=1.605]/baseHungerRate</xpath>
+    <value><baseHungerRate>0.53</baseHungerRate></value>
+  </Operation>
+
+</Patch>

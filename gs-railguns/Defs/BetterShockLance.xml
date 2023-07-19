@@ -1,0 +1,91 @@
+<Defs>
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_BetterPsychicShockLance</defName>
+    <label>better psychic shock lance</label>
+    <description>Like the original, but 99 charges, faster, longer range, they don't mind, and very low chance of brain damage.</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/PsychicShockLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Archotech</techLevel>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>0.5</Mass>
+      <EquipDelay>1</EquipDelay>
+      <MarketValue>550</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <ignoredByNonViolent>true</ignoredByNonViolent>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <relicChance>3</relicChance>
+    <verbs>
+      <li>
+        <verbClass>Verb_CastTargetEffectLances</verbClass>
+        <label>psychic shock lance</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <onlyManualCast>True</onlyManualCast>
+        <range>44.9</range>
+        <warmupTime>0.1</warmupTime>
+        <invalidTargetPawn>Psychic shock immune</invalidTargetPawn>
+        <targetParams>
+          <canTargetBuildings>false</canTargetBuildings>
+          <neverTargetIncapacitated>true</neverTargetIncapacitated>
+        </targetParams>
+        <soundCast>PsychicShockLanceCast</soundCast>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>99</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_PsychicShock</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffect_BrainDamageChance">
+        <brainDamageChance>0.001</brainDamageChance>
+      </li>
+      <li Class="CompProperties_TargetEffect_GoodwillImpact">
+        <goodwillImpact>20</goodwillImpact>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckConnecting">
+        <fleckDef>PsycastPsychicLine</fleckDef>
+      </li>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

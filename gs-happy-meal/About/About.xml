@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.HappyMeal</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-happy-meal</name>
+  <description>Simple meals provide +99 mood for 365 days</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

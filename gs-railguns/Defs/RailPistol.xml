@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Create tasteThought for eating simple meal -->
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Rail</defName>
+    <label>rail bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>150</damageAmountBase>
+      <stoppingPower>20</stoppingPower>
+      <speed>150</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_RailPistol</defName>
+    <label>rail pistol</label>
+    <description>Advanced railgun pistol</description>
+    <possessionCount>1</possessionCount>
+    <generateAllowChance>0</generateAllowChance>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <statBases>
+      <MaxHitPoints>28000</MaxHitPoints>
+      <WorkToMake>40</WorkToMake>
+      <Mass>0.4</Mass>
+      <AccuracyTouch>0.99</AccuracyTouch>
+      <AccuracyShort>0.98</AccuracyShort>
+      <AccuracyMedium>0.97</AccuracyMedium>
+      <AccuracyLong>0.96</AccuracyLong>
+      <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Rail</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>55.9</range>
+        <soundCast>Shot_Revolver</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>49</power>
+        <cooldownTime>0.5</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>49</power>
+        <cooldownTime>0.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

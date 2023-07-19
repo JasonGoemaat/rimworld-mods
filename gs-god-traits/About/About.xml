@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.GodTraits</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-god-traits</name>
+  <description>Traits to make your pawns into gods, especially 'buff'</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

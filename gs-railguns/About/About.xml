@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.RailGuns</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-rail-guns</name>
+  <description>OP RailPistol and BetterPsychicShockLance, give with dev menu</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

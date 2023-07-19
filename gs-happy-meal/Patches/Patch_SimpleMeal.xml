@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Give SimpleMeal a tasteThough -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "MealSimple"]/ingestible</xpath>
+    <value>
+      <tasteThought>AteHappyMeal</tasteThought>
+    </value>
+  </Operation>
+</Patch>

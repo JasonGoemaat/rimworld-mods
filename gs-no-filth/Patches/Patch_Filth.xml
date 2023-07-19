@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@ParentName="BaseFilth"]/filth/disappearsInDays</xpath>
+    <value>
+      <disappearsInDays>0.005~0.006</disappearsInDays> <!-- under 10 minutes -->
+    </value>
+  </Operation>
+</Patch>

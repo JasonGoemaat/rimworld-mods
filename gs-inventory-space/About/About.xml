@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.GsInventorySpace</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-inventory-space</name>
+  <description>
+    Allows you to alter the global capacity to allow all pawns to carry more than the default, which is 35kg for colonists with BodySize 1.0.  This affects inventory capacity and caravan capacity.
+
+    Source Code: https://github.com/JasonGoemaat/rimworld-mods/tree/master/gs-inventory-space
+  </description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

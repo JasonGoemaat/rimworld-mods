@@ -1,0 +1,57 @@
+<Patch>
+  <!-- NOTE: Thise should now be handled in the Harmony C# code so they
+             can be changed in the mod options -->
+  <!-- <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/StatDef[defName="DeepDrillingSpeed"]/skillNeedFactors/li/baseValue</xpath>
+    <value>
+      <baseValue>0.20</baseValue>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/StatDef[defName="DeepDrillingSpeed"]/skillNeedFactors/li/bonusPerLevel</xpath>
+    <value>
+      <bonusPerLevel>0.60</bonusPerLevel>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DeepDrill"]/specialDisplayRadius</xpath>
+    <value>
+      <specialDisplayRadius>54.6</specialDisplayRadius>
+    </value>
+  </Operation> -->
+</Patch>
+<!--
+  <StatDef>
+    <defName>DeepDrillingSpeed</defName>
+    <label>deep drilling speed</label>
+    <description>A speed at which this person uses a deep drill to extract underground
+resources.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <statFactors>
+      <li>WorkSpeedGlobal</li>
+    </statFactors>
+    <skillNeedFactors>
+      <li Class="SkillNeed_BaseBonus">
+        <skill>Mining</skill>
+        <baseValue>0.04</baseValue>
+        <bonusPerLevel>0.12</bonusPerLevel>
+      </li>
+    </skillNeedFactors>
+    <capacityFactors>
+      <li>
+        <capacity>Manipulation</capacity>
+        <weight>1</weight>
+      </li>
+      <li>
+        <capacity>Sight</capacity>
+        <weight>0.5</weight>
+        <max>1</max>
+      </li>
+    </capacityFactors>
+    <scenarioRandomizable>true</scenarioRandomizable>
+    <displayPriorityInCategory>4901</displayPriorityInCategory>
+  </StatDef>
+-->

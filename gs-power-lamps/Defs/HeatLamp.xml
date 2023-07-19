@@ -1,0 +1,44 @@
+<Defs>
+  <ThingDef ParentName="LampBase">
+    <defName>HeatLamp</defName>
+    <label>Heat Lamp</label>
+    <description>A lamp that provides power and heat with a thermostat</description>
+    <thingClass>Building_Heater</thingClass>
+    <thingCategories>
+      <li>BuildingsTemperature</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+    </graphicData>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <statBases>
+      <Mass>1</Mass>
+      <MaxHitPoints>5200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>99</Beauty>
+    </statBases>
+    <designationCategory>Power</designationCategory>
+    <uiOrder>2990</uiOrder>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(250,210,210,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>100</energyPerSecond>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

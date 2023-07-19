@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>Goemaat.SuperTurret</packageId>
+  <author>Jason Goemaat</author>
+  <name>gs-super-turret</name>
+  <description>Steel-only super turret.  Uses steel for ammo and doesn't require power.  VERY accurate with high damage.</description>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <forceLoadBefore>
+  </forceLoadBefore>
+</ModMetaData>

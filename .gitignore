@@ -1,0 +1,34 @@
+# Ignore everything by default
+*
+
+# But not these files...
+!.gitignore
+!preview.xcf
+!README.md
+!Thoughts.md
+
+# and not these directories or their contents
+!gs-deep-drilling
+!gs-deep-drilling/**/*
+!gs-god-traits
+!gs-god-traits/**/*
+!gs-happy-meal
+!gs-happy-meal/**/*
+!gs-harmony-helloworld
+!gs-harmony-helloworld/**/*
+!gs-inventory-space
+!gs-inventory-space/**/*
+!gs-no-filth
+!gs-no-filth/**/*
+!gs-power-lamps
+!gs-power-lamps/**/*
+!gs-railguns
+!gs-railguns/**/*
+!gs-sated-animals
+!gs-sated-animals/**/*
+!gs-stillsuit
+!gs-stillsuit/**/*
+!gs-super-turret
+!gs-super-turret/**/*
+!gs-stillsuit/**/*
+

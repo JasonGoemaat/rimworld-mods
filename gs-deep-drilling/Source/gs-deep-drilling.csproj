@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>gs_deep_drilling</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3704" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir ..\Assemblies&#xD;&#xA;copy $(OutDir)\gs-deep-drilling.dll ..\Assemblies" />
+  </Target>
+
+</Project>
